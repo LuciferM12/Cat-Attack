@@ -9,7 +9,7 @@ public class menuInicial : MonoBehaviour
     }
 
     public void Salir(){
-        Debug.Log("Salir");
+        Debug.Log("Saliendooo");
         Application.Quit();
     }
 }

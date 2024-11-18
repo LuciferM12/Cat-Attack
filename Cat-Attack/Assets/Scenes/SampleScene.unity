@@ -1738,7 +1738,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.074, y: 0.7944985}
   m_AnchorMax: {x: 0.074, y: 0.7944985}
-  m_AnchoredPosition: {x: 50.485, y: 27}
+  m_AnchoredPosition: {x: -50.486084, y: 115}
   m_SizeDelta: {x: 100.971, y: 103.613}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &309286600
@@ -6259,6 +6259,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1549149269
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1280372699, guid: 88dce72753462cc47bb32add7f82a2c4, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408623999408938362, guid: 88dce72753462cc47bb32add7f82a2c4, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408623999408938362, guid: 88dce72753462cc47bb32add7f82a2c4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.143
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408623999408938362, guid: 88dce72753462cc47bb32add7f82a2c4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.763
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408623999408938362, guid: 88dce72753462cc47bb32add7f82a2c4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408623999408938362, guid: 88dce72753462cc47bb32add7f82a2c4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408623999408938362, guid: 88dce72753462cc47bb32add7f82a2c4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408623999408938362, guid: 88dce72753462cc47bb32add7f82a2c4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408623999408938362, guid: 88dce72753462cc47bb32add7f82a2c4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408623999408938362, guid: 88dce72753462cc47bb32add7f82a2c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408623999408938362, guid: 88dce72753462cc47bb32add7f82a2c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408623999408938362, guid: 88dce72753462cc47bb32add7f82a2c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408623999408938367, guid: 88dce72753462cc47bb32add7f82a2c4, type: 3}
+      propertyPath: m_Name
+      value: Cobra Sprite Sheet_0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 88dce72753462cc47bb32add7f82a2c4, type: 3}
 --- !u!1 &1554820080
 GameObject:
   m_ObjectHideFlags: 0
@@ -13409,7 +13470,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 815.49365, y: 277}
+  m_AnchoredPosition: {x: 900, y: 389}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 1.0483035, y: 0.5}
 --- !u!114 &2145857115

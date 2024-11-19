@@ -12,4 +12,12 @@ public class menuInicial : MonoBehaviour
         Debug.Log("Saliendooo");
         Application.Quit();
     }
+
+    public void CargarEscena(int index){
+        SceneManager.LoadScene(index);
+    }
+
+    public void CargarEscena(string nombre){
+        SceneManager.LoadScene(nombre);
+    }
 }

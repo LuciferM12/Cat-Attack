@@ -6316,7 +6316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7408623999408938367, guid: 88dce72753462cc47bb32add7f82a2c4, type: 3}
       propertyPath: m_Name
-      value: Cobra Sprite Sheet_0
+      value: Cobra
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88dce72753462cc47bb32add7f82a2c4, type: 3}

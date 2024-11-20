@@ -1,24 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    private float speed = 0.05f;
-    private Rigidbody2D enemyRb;
-    private GameObject player;
-
     // Start is called before the first frame update
-    void Start()
+    public Transform personaje;
+    private NavMeshAgent agente;
+    private SpriteRenderer spriteRenderer;
+    private void Awake()
     {
-        enemyRb = GetComponent<Rigidbody2D>();
-        player = GameObject.Find("Player");
+        agente = GetComponent<NavMeshAgent>();
+
+    }
+
+    private void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        agente.updateRotation = false;
+        agente.updateUpAxis = false;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        Vector3 lookDirection = (player.transform.position - transform.position).normalized;
-        enemyRb.velocity = lookDirection * speed;
+        agente.SetDestination(personaje.position);
+        Vector2 velocity = agente.velocity;
+        if (velocity.magnitude > 0.01f)
+        {
+            spriteRenderer.flipX = velocity.x < 0;
+        }
     }
 }

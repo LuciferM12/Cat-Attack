@@ -75,7 +75,7 @@ TextureImporter:
       213: -7447262499958392998
     second: BeetleAttack_23
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -92,10 +92,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -134,6 +136,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -145,6 +149,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -157,6 +162,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -676,9 +695,33 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      BeetleAttack_0: 221779510434664861
+      BeetleAttack_1: -2444687988763354594
+      BeetleAttack_10: -6058267285768589640
+      BeetleAttack_11: -6655768696967430
+      BeetleAttack_12: -5621281503076878027
+      BeetleAttack_13: -6196451716888744682
+      BeetleAttack_14: -1894496951407963319
+      BeetleAttack_15: -6262911884435804847
+      BeetleAttack_16: -2164110081651231827
+      BeetleAttack_17: 2916972040416740786
+      BeetleAttack_18: -6360791564302272127
+      BeetleAttack_19: -4907858574437498899
+      BeetleAttack_2: 8705153186766634
+      BeetleAttack_20: 5082092567816011210
+      BeetleAttack_21: 3637512952909176937
+      BeetleAttack_22: 4229774948509789901
+      BeetleAttack_23: -7447262499958392998
+      BeetleAttack_3: 1296792979693668111
+      BeetleAttack_4: -57879320316961066
+      BeetleAttack_5: -92093065442276873
+      BeetleAttack_6: 7933346587677693101
+      BeetleAttack_7: -8185630864205779332
+      BeetleAttack_8: -4507541930116912347
+      BeetleAttack_9: 9152327337091680310
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

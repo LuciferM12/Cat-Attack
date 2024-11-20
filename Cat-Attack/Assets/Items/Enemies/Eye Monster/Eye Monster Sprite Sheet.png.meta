@@ -6,7 +6,7 @@ TextureImporter:
       213: -4823307872461120680
     second: Eye Monster Sprite Sheet_30
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -23,10 +23,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -65,6 +67,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -76,6 +80,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -88,6 +93,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -754,9 +773,40 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      Eye Monster Sprite Sheet_0: -2764777967881213442
+      Eye Monster Sprite Sheet_1: 3529443872843807392
+      Eye Monster Sprite Sheet_10: 2231738938111092633
+      Eye Monster Sprite Sheet_11: 2251413387109845220
+      Eye Monster Sprite Sheet_12: -2798301379039595300
+      Eye Monster Sprite Sheet_13: 4073188406979343085
+      Eye Monster Sprite Sheet_14: 8503196644041485580
+      Eye Monster Sprite Sheet_15: 5496348172961592005
+      Eye Monster Sprite Sheet_16: -1869086313684474069
+      Eye Monster Sprite Sheet_17: -2452166284294713618
+      Eye Monster Sprite Sheet_18: -2140342794429616473
+      Eye Monster Sprite Sheet_19: 1922085328340373582
+      Eye Monster Sprite Sheet_2: 2483706037620193636
+      Eye Monster Sprite Sheet_20: 6871270841518267064
+      Eye Monster Sprite Sheet_21: 9216690527753763956
+      Eye Monster Sprite Sheet_22: -6018306832744614641
+      Eye Monster Sprite Sheet_23: 3468734751165016404
+      Eye Monster Sprite Sheet_24: -6445409606025322832
+      Eye Monster Sprite Sheet_25: 4264895191910263470
+      Eye Monster Sprite Sheet_26: 3902439002681767430
+      Eye Monster Sprite Sheet_27: -6537318998945783438
+      Eye Monster Sprite Sheet_28: -9193292707994357546
+      Eye Monster Sprite Sheet_29: 7625624915801916004
+      Eye Monster Sprite Sheet_3: -7137494819657055094
+      Eye Monster Sprite Sheet_30: -4823307872461120680
+      Eye Monster Sprite Sheet_4: 1470367266730159686
+      Eye Monster Sprite Sheet_5: -996812348892843334
+      Eye Monster Sprite Sheet_6: 7021775864361948672
+      Eye Monster Sprite Sheet_7: 584131441853680774
+      Eye Monster Sprite Sheet_8: -5182530453415588849
+      Eye Monster Sprite Sheet_9: 4703100865061362790
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -93,7 +93,7 @@ TextureImporter:
       213: 5820731976264723767
     second: Mini Golem Sprite Sheet_56
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -110,10 +110,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -152,6 +154,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -163,6 +167,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -175,6 +180,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -820,9 +839,39 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      Mini Golem Sprite Sheet_0: -1596999484918499234
+      Mini Golem Sprite Sheet_11: -1166813639320239918
+      Mini Golem Sprite Sheet_14: -1011036417957276747
+      Mini Golem Sprite Sheet_17: 8126926881044104213
+      Mini Golem Sprite Sheet_19: -6668672719679400805
+      Mini Golem Sprite Sheet_2: -5868460566451133612
+      Mini Golem Sprite Sheet_20: 1152678435462789172
+      Mini Golem Sprite Sheet_21: 6634883003530336932
+      Mini Golem Sprite Sheet_22: 139216771421556933
+      Mini Golem Sprite Sheet_25: -7570660213394696112
+      Mini Golem Sprite Sheet_28: 4294968934847949296
+      Mini Golem Sprite Sheet_31: -5045938994489808614
+      Mini Golem Sprite Sheet_33: -184963351786622533
+      Mini Golem Sprite Sheet_34: 4487338384766231104
+      Mini Golem Sprite Sheet_35: 2170611481311278502
+      Mini Golem Sprite Sheet_37: -3390011772628829179
+      Mini Golem Sprite Sheet_38: -8163848670084305880
+      Mini Golem Sprite Sheet_4: -7432283234180737360
+      Mini Golem Sprite Sheet_41: 222173199621493131
+      Mini Golem Sprite Sheet_43: 2980037161726842122
+      Mini Golem Sprite Sheet_45: -6599000786151758190
+      Mini Golem Sprite Sheet_46: -4448762374512588674
+      Mini Golem Sprite Sheet_48: 5359932240570465063
+      Mini Golem Sprite Sheet_51: -6756414607291947316
+      Mini Golem Sprite Sheet_53: -9035327318744605071
+      Mini Golem Sprite Sheet_55: -5725826171294366132
+      Mini Golem Sprite Sheet_56: 5820731976264723767
+      Mini Golem Sprite Sheet_6: -1094625303698739924
+      Mini Golem Sprite Sheet_7: -3013171148727623495
+      Mini Golem Sprite Sheet_9: 7096200858154294914
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

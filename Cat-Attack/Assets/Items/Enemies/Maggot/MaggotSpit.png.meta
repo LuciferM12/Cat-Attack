@@ -87,7 +87,7 @@ TextureImporter:
       213: 2631207106241994871
     second: MaggotSpit_27
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -104,10 +104,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -146,6 +148,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -157,6 +161,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -169,6 +174,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -772,9 +791,37 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      MaggotSpit_0: -4596305389807768657
+      MaggotSpit_1: -2200209927472727408
+      MaggotSpit_10: -2279179988079930930
+      MaggotSpit_11: 809162557291311016
+      MaggotSpit_12: -6800180465968456510
+      MaggotSpit_13: 2385274449891998911
+      MaggotSpit_14: -7040660744609605536
+      MaggotSpit_15: 2431566822790655175
+      MaggotSpit_16: -2841103255812001368
+      MaggotSpit_17: 1325117885428990547
+      MaggotSpit_18: 2589801639912387807
+      MaggotSpit_19: -7520602805874294750
+      MaggotSpit_2: -5777453988369494734
+      MaggotSpit_20: 1732181237630396537
+      MaggotSpit_21: 1918389227507105998
+      MaggotSpit_22: -8409147352364148066
+      MaggotSpit_23: -7790598949465114925
+      MaggotSpit_24: 4466274462410004611
+      MaggotSpit_25: 5523710908800914038
+      MaggotSpit_26: -2171150491758902941
+      MaggotSpit_27: 2631207106241994871
+      MaggotSpit_3: 6338247321095932391
+      MaggotSpit_4: -7325862983256408698
+      MaggotSpit_5: 982264858705876031
+      MaggotSpit_6: 7943271189052711185
+      MaggotSpit_7: 6367445578019933723
+      MaggotSpit_8: -3713964050822228475
+      MaggotSpit_9: -3249565920709023424
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

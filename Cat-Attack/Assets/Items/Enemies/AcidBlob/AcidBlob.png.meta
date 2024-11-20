@@ -87,7 +87,7 @@ TextureImporter:
       213: 978366416787436262
     second: AcidBlob_27
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -104,10 +104,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -146,6 +148,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -157,6 +161,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -169,6 +174,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -772,9 +791,37 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      AcidBlob_0: -4691243391872931400
+      AcidBlob_1: 5091392005377893100
+      AcidBlob_10: 32501284049893792
+      AcidBlob_11: 9165592211183719026
+      AcidBlob_12: 7447196572398635939
+      AcidBlob_13: -7145865638701431880
+      AcidBlob_14: -2873034697989472562
+      AcidBlob_15: -255058815072731369
+      AcidBlob_16: -2770654258023000859
+      AcidBlob_17: 6894840831750348892
+      AcidBlob_18: 4454141486435946359
+      AcidBlob_19: -3833411300554633694
+      AcidBlob_2: -2346074543959182658
+      AcidBlob_20: 5433261275554892576
+      AcidBlob_21: -6899481244860997653
+      AcidBlob_22: 4585779668890625763
+      AcidBlob_23: -9023814955299395220
+      AcidBlob_24: 8259849665161224266
+      AcidBlob_25: 5417117667813193651
+      AcidBlob_26: -8533744875706036255
+      AcidBlob_27: 978366416787436262
+      AcidBlob_3: -1851894962524143389
+      AcidBlob_4: -8981779574544821278
+      AcidBlob_5: -3537303673108513854
+      AcidBlob_6: 4964919041159894659
+      AcidBlob_7: 1191023455707558866
+      AcidBlob_8: -4055735571622678265
+      AcidBlob_9: 7144500994574985952
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

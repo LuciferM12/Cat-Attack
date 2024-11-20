@@ -9,7 +9,7 @@ TextureImporter:
       213: 2249171316757544893
     second: Dungeon Collectables_61
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -26,10 +26,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -68,6 +70,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -79,6 +83,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -91,6 +96,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1408,9 +1427,71 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      Dungeon Collectables_0: -4981027512063062209
+      Dungeon Collectables_1: 8491543709793888540
+      Dungeon Collectables_10: 4604653957286751398
+      Dungeon Collectables_11: -9039626606516614119
+      Dungeon Collectables_12: 6682896973852923195
+      Dungeon Collectables_13: -7094880711516134970
+      Dungeon Collectables_14: 3731069644163115339
+      Dungeon Collectables_15: -2899221626762912873
+      Dungeon Collectables_16: 5276200900968943004
+      Dungeon Collectables_17: -6681965107842798902
+      Dungeon Collectables_18: 6506629424491578777
+      Dungeon Collectables_19: 6829010362773081039
+      Dungeon Collectables_2: -7926764574928860638
+      Dungeon Collectables_20: 8585337745559550001
+      Dungeon Collectables_21: 3045172811279320518
+      Dungeon Collectables_22: 2698192754117038406
+      Dungeon Collectables_23: 510378136601011835
+      Dungeon Collectables_24: 5130627243197491662
+      Dungeon Collectables_25: 7139187838515069791
+      Dungeon Collectables_26: -4095409828478574506
+      Dungeon Collectables_27: 5432353997622487570
+      Dungeon Collectables_28: -1562064083800305476
+      Dungeon Collectables_29: -7044564965042940968
+      Dungeon Collectables_3: 8376373798699548044
+      Dungeon Collectables_30: 4728079521747387509
+      Dungeon Collectables_31: 3415182904475538826
+      Dungeon Collectables_32: -6352183285247097963
+      Dungeon Collectables_33: 6732726125909585893
+      Dungeon Collectables_34: 6288459789718912356
+      Dungeon Collectables_35: -8897916520915732096
+      Dungeon Collectables_36: -1484005838747827312
+      Dungeon Collectables_37: 2119473919272843211
+      Dungeon Collectables_38: -739816467086169766
+      Dungeon Collectables_39: 3618095115115201316
+      Dungeon Collectables_4: -1993628870884830186
+      Dungeon Collectables_40: 8859461837538376766
+      Dungeon Collectables_41: 5500159539016708025
+      Dungeon Collectables_42: -4443509392822675782
+      Dungeon Collectables_43: -1642212851157522695
+      Dungeon Collectables_44: 7966821305654872209
+      Dungeon Collectables_45: -8058128219490997177
+      Dungeon Collectables_46: 4232332110829087699
+      Dungeon Collectables_47: -5060553453526144757
+      Dungeon Collectables_48: -8234185889769579856
+      Dungeon Collectables_49: 1588848132050266980
+      Dungeon Collectables_5: -5718687790894517427
+      Dungeon Collectables_50: 17682809781171341
+      Dungeon Collectables_51: -1035559217244117572
+      Dungeon Collectables_52: 1032874224828317971
+      Dungeon Collectables_53: 8613126039453912486
+      Dungeon Collectables_54: 4075156790377629036
+      Dungeon Collectables_55: -4437859670124924521
+      Dungeon Collectables_56: 2708593062330259706
+      Dungeon Collectables_57: 3995863874401759228
+      Dungeon Collectables_58: -7802832281504000969
+      Dungeon Collectables_59: -4172109317174925783
+      Dungeon Collectables_6: -3715489973487708034
+      Dungeon Collectables_60: -6277042810995023871
+      Dungeon Collectables_61: 2249171316757544893
+      Dungeon Collectables_7: 3981406535509432002
+      Dungeon Collectables_8: -3796129081628504124
+      Dungeon Collectables_9: -7075445026061771052
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

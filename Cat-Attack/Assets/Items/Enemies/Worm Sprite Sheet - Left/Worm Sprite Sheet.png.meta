@@ -108,7 +108,7 @@ TextureImporter:
       213: 4936814490434993486
     second: Worm Sprite Sheet_27
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -125,10 +125,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -167,6 +169,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -178,6 +182,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -190,6 +195,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -940,9 +959,44 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      Worm Sprite Sheet_0: -2514440940612402490
+      Worm Sprite Sheet_1: 5122701829642843209
+      Worm Sprite Sheet_10: 3015627012876572087
+      Worm Sprite Sheet_11: 4912899020837573728
+      Worm Sprite Sheet_12: 7572941610472422707
+      Worm Sprite Sheet_13: -2319879413724810236
+      Worm Sprite Sheet_14: 80921857912546744
+      Worm Sprite Sheet_15: 399992396588776784
+      Worm Sprite Sheet_16: -7262231408199845394
+      Worm Sprite Sheet_17: 4748369357243860077
+      Worm Sprite Sheet_18: 5796799194524133157
+      Worm Sprite Sheet_19: -391912662137484344
+      Worm Sprite Sheet_2: 6732753838260750580
+      Worm Sprite Sheet_20: 5213795149803916314
+      Worm Sprite Sheet_21: -8203029189544996578
+      Worm Sprite Sheet_22: 8897371973831535114
+      Worm Sprite Sheet_23: 8140224936124192542
+      Worm Sprite Sheet_24: 2502597842872008408
+      Worm Sprite Sheet_25: -6658990567620620208
+      Worm Sprite Sheet_26: -3613799732438823371
+      Worm Sprite Sheet_27: 4936814490434993486
+      Worm Sprite Sheet_29: -5458832420009119020
+      Worm Sprite Sheet_3: -4924982861335397904
+      Worm Sprite Sheet_39: 938168347473203180
+      Worm Sprite Sheet_4: -2155549288049806866
+      Worm Sprite Sheet_40: -8315769740412399821
+      Worm Sprite Sheet_43: -4946628635309840387
+      Worm Sprite Sheet_46: 2235041401884060023
+      Worm Sprite Sheet_47: -9181524620130512978
+      Worm Sprite Sheet_48: -2413282015604403277
+      Worm Sprite Sheet_5: -8893676993568332311
+      Worm Sprite Sheet_6: -4369442403344913325
+      Worm Sprite Sheet_7: -8529895679949998017
+      Worm Sprite Sheet_8: 4370586541199923744
+      Worm Sprite Sheet_9: -479043036343074572
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

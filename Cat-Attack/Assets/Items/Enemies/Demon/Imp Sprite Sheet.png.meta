@@ -3,7 +3,7 @@ guid: 215920c970c19044783e919dfcbd63d4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,10 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -62,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -73,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -85,6 +90,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1696,9 +1715,85 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      Imp Sprite Sheet_0: -7021294630956641602
+      Imp Sprite Sheet_1: 5971677691513566005
+      Imp Sprite Sheet_10: 3695083227574673442
+      Imp Sprite Sheet_11: 9095370414285492293
+      Imp Sprite Sheet_12: -2549088637370218189
+      Imp Sprite Sheet_13: -4981869168354988654
+      Imp Sprite Sheet_14: -1114102729240293016
+      Imp Sprite Sheet_15: -4566726218091123327
+      Imp Sprite Sheet_16: -6461749295843137663
+      Imp Sprite Sheet_17: 4605925824525252523
+      Imp Sprite Sheet_18: 822080299581969200
+      Imp Sprite Sheet_19: -7687979924162972223
+      Imp Sprite Sheet_2: 9152423973795712107
+      Imp Sprite Sheet_20: 5815465024552843527
+      Imp Sprite Sheet_21: -3093500364217615976
+      Imp Sprite Sheet_22: 7146271980508046259
+      Imp Sprite Sheet_23: 3084167260208388475
+      Imp Sprite Sheet_24: -678282037672765964
+      Imp Sprite Sheet_25: 6917543249801233796
+      Imp Sprite Sheet_26: 7785506631664847917
+      Imp Sprite Sheet_27: -1074009178923171056
+      Imp Sprite Sheet_28: -3871228409934178121
+      Imp Sprite Sheet_29: -3342262907629554450
+      Imp Sprite Sheet_3: -4303437075756346585
+      Imp Sprite Sheet_30: 6399323660450090918
+      Imp Sprite Sheet_31: 3483542119605871135
+      Imp Sprite Sheet_32: 5256776862375074738
+      Imp Sprite Sheet_33: 3829870408328581606
+      Imp Sprite Sheet_34: -4567651919298045073
+      Imp Sprite Sheet_35: 4858444893887966754
+      Imp Sprite Sheet_36: 349423989964397893
+      Imp Sprite Sheet_37: -650850377368004069
+      Imp Sprite Sheet_38: -1041050545479752391
+      Imp Sprite Sheet_39: -3803979400497922343
+      Imp Sprite Sheet_4: -6834534244677126249
+      Imp Sprite Sheet_40: 3371627859376957050
+      Imp Sprite Sheet_41: -3700183294463154650
+      Imp Sprite Sheet_42: -7776175830413122528
+      Imp Sprite Sheet_43: -849575147430391290
+      Imp Sprite Sheet_44: -4662546823774023677
+      Imp Sprite Sheet_45: -2143358964275748111
+      Imp Sprite Sheet_46: -52948197992090251
+      Imp Sprite Sheet_47: -3955934358525847082
+      Imp Sprite Sheet_48: -3267268341729050927
+      Imp Sprite Sheet_49: 6015250911928504873
+      Imp Sprite Sheet_5: -4631332355939174100
+      Imp Sprite Sheet_50: -7733473722192663148
+      Imp Sprite Sheet_51: 7159575296342961036
+      Imp Sprite Sheet_52: 1750769831183858808
+      Imp Sprite Sheet_53: 7014634417467823104
+      Imp Sprite Sheet_54: -3520037285322877892
+      Imp Sprite Sheet_55: -3315827861055641536
+      Imp Sprite Sheet_56: 3574230294595610358
+      Imp Sprite Sheet_57: -2977134422441006127
+      Imp Sprite Sheet_58: -1669697114704650523
+      Imp Sprite Sheet_59: -2101279757016366961
+      Imp Sprite Sheet_6: 2559073871556193069
+      Imp Sprite Sheet_60: 4778254834851712368
+      Imp Sprite Sheet_61: -6321666208280337480
+      Imp Sprite Sheet_62: -2821956095238515948
+      Imp Sprite Sheet_63: 797935890718540056
+      Imp Sprite Sheet_64: -8685422581219065813
+      Imp Sprite Sheet_65: 4039162124556050907
+      Imp Sprite Sheet_66: 8876667343608327801
+      Imp Sprite Sheet_67: -5853879336591147235
+      Imp Sprite Sheet_68: -4045299116892395237
+      Imp Sprite Sheet_69: -6901393009167646366
+      Imp Sprite Sheet_7: 3327920378395661321
+      Imp Sprite Sheet_70: -6043232591540817223
+      Imp Sprite Sheet_71: 8189984240483847992
+      Imp Sprite Sheet_72: 8254268204827221283
+      Imp Sprite Sheet_73: 7888090384287898980
+      Imp Sprite Sheet_74: -5184084771102406395
+      Imp Sprite Sheet_75: -6949609504782674380
+      Imp Sprite Sheet_8: 6591182423979453482
+      Imp Sprite Sheet_9: 6117253617616554438
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -6,7 +6,7 @@ public class ItemEnemigo : MonoBehaviour
 {
     [SerializeField] private float velocidad;
     [SerializeField] private int danio;
-    [SerializeField] private float tiempoDeVida;
+    [SerializeField] private float tiempoDeVida;//ocupamos modificar esto, esto nomas es de prueba
 
     private void Start(){
         Destroy(gameObject,tiempoDeVida);

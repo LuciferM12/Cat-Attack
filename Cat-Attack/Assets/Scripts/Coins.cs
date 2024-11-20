@@ -11,10 +11,12 @@ public class Coins : MonoBehaviour //CHANGE SCRIPT
     {
         if (other.CompareTag("Player")) // Verifica si el jugador colisiona
         {
+
             Debug.Log("Colisión detectada con Player");
             puntaje.SumarPuntos(cantidadPuntos); // Suma puntos al puntaje
             Destroy(gameObject); // Destruye la moneda
             Debug.Log("Moneda destruida");
+            
         }
     }
 }

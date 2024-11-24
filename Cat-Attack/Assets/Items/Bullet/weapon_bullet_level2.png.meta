@@ -1,16 +1,7 @@
 fileFormatVersion: 2
-guid: ab4c74a0cf4719d489cc1732e5bae0e6
+guid: b4e91bc59716fb64caec0e268b6624c4
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -3646123972622350718
-    second: Meow-Knight_Take_Damage_0
-  - first:
-      213: 7417206342834096107
-    second: Meow-Knight_Take_Damage_1
-  - first:
-      213: 5255111949883716298
-    second: Meow-Knight_Take_Damage_2
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -74,7 +65,7 @@ TextureImporter:
   ignorePngGamma: 0
   applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -102,49 +93,15 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Meow-Knight_Take_Damage_0
+      name: weapon_bullet_level2_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 52
-        width: 12
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2860fcc909d566dc0800000000000000
-      internalID: -3646123972622350718
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Meow-Knight_Take_Damage_1
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 26
+        x: 0
+        y: 2
         width: 14
         height: 14
       alignment: 0
@@ -154,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be7866aeed53fe660800000000000000
-      internalID: 7417206342834096107
+      spriteID: 266da149737d97243a284adcdb6e9f7f
+      internalID: 2005566847
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Meow-Knight_Take_Damage_2
+      name: weapon_bullet_level2_1
       rect:
         serializedVersion: 2
-        x: 2
-        y: 0
-        width: 12
-        height: 16
+        x: 18
+        y: 2
+        width: 14
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,8 +132,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac2bab3c978ede840800000000000000
-      internalID: 5255111949883716298
+      spriteID: b89b6a780a51eac47b862d973462c7a8
+      internalID: -174484217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_bullet_level2_2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 2
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 568ea65746c802449b74cfa441888630
+      internalID: 1141667020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_bullet_level2_3
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 2
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e896dfd785dd24fa10a5a5b0447ad2
+      internalID: 859405835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_bullet_level2_4
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 2
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eceb43142ce7b445b6dc9b68a9fa29f
+      internalID: 1262187433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_bullet_level2_5
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 2
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7844df70bd8f5b1459ba175093c36973
+      internalID: 1028143272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_bullet_level2_6
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 2
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 012b64e8c0dd162458061122af695a89
+      internalID: 500832495
       vertices: []
       indices: 
       edges: []
@@ -192,9 +254,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Meow-Knight_Take_Damage_0: -3646123972622350718
-      Meow-Knight_Take_Damage_1: 7417206342834096107
-      Meow-Knight_Take_Damage_2: 5255111949883716298
+      weapon_bullet_level2_0: 2005566847
+      weapon_bullet_level2_1: -174484217
+      weapon_bullet_level2_2: 1141667020
+      weapon_bullet_level2_3: 859405835
+      weapon_bullet_level2_4: 1262187433
+      weapon_bullet_level2_5: 1028143272
+      weapon_bullet_level2_6: 500832495
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

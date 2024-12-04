@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 8
-  danio: 100
+  danio: 20
   vida: 100
 --- !u!195 &4629894026323903588
 NavMeshAgent:

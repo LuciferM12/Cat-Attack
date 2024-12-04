@@ -9,9 +9,12 @@ public class Disparo : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     [SerializeField] private Transform controladorDisparo;
     [SerializeField] private GameObject bala;
+    public AudioClip shoot;
+    private AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -30,6 +33,7 @@ public class Disparo : MonoBehaviour
         }
 
         if(Input.GetButtonDown("Fire1")){
+            audio.PlayOneShot(shoot, 2.0f);
             Disparar();
         }
     }

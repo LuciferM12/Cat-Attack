@@ -9,16 +9,19 @@ public class Bala : MonoBehaviour
 
     private float minX = -0.11f, maxX= 8.4f;
     private float minY = -4.6f, maxY = 0.01f;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         transform.Translate(Vector2.up * velocidad * Time.deltaTime);
         if(transform.position.y > maxY || transform.position.y < minY){
             Destroy(gameObject);

@@ -219,4 +219,6 @@ MonoBehaviour:
   velocidad: 0
   danio: 30
   vida: 110
-  coin: {fileID: 7815156559418787193, guid: 643f6e3ade2d2f141a9b45f797bf6a01, type: 3}
+  coin:
+  - {fileID: 4276443161537204355, guid: b47f55870527270418b870e5f39c13ca, type: 3}
+  - {fileID: 7815156559418787193, guid: 643f6e3ade2d2f141a9b45f797bf6a01, type: 3}

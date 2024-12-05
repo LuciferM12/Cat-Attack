@@ -10,6 +10,7 @@ TagManager:
   - Vida
   - DoubleTap
   - Estrella
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX

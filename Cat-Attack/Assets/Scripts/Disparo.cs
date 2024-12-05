@@ -58,7 +58,7 @@ public class Disparo : MonoBehaviour
         }
 
         // Configura otras propiedades de la bala (como velocidad, dirección, etc.)
-        balaScript.velocidad = 10f;
+        balaScript.velocidad = 2.0f;
 
         // Desactivar el doble daño después de un tiempo
         StartCoroutine(RestaurarDaño(balaScript));

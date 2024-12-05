@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bala : MonoBehaviour
 {
-    public float velocidad;
+    public float velocidad = 2.0f;
     public float daño;
 
     private float minX = -0.11f, maxX= 8.4f;

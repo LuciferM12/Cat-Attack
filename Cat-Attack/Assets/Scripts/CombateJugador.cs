@@ -29,7 +29,10 @@ public class CombateJugador : MonoBehaviour
         }
 
         vida-=cantidadDanio;
+        Debug.Log("Vida actual después de recibir daño: " + vida);
         if(vida<=0){
+            vida = 0;
+            Debug.Log("Vida llegó a 0, activando muerte del jugador.");
             animator.SetBool("Death", true);
             StartCoroutine(Death());
             MuerteJugador?.Invoke(this,EventArgs.Empty);

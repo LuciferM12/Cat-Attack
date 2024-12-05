@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip dodge;
     public AudioClip money;
     public float moneyCount;
-
+int contador=25;
     private float minX = -0.00817865f, maxX = 8.174194f;
     private float minY = -4.399909f, maxY = -0.1328556f;
 
@@ -106,27 +106,28 @@ public class PlayerController : MonoBehaviour
         }
 
         // Verifica si el jugador puede interactuar (si está dentro de la zona de colisión)
-        if (canInteractVida && Input.GetKeyDown(KeyCode.E) && puntaje.puntos >= 1000)
+        if (canInteractVida && Input.GetKeyDown(KeyCode.E) && moneyCount >= 1000)
         {
             Debug.Log("Tecla E presionada con puntaje suficiente.");
-            vida.ReestablecerVida(100);
-            puntaje.SumarPuntos(-1000); // Resta puntos al puntaje
+            contador+=10;
+            vida.ReestablecerVida(100+contador);
+            moneyCount-=1000; // Resta puntos al puntaje
         }
 
         // Activar el DoubleTap si está en la zona y tiene puntos suficientes
-        if (canInteractDoble && Input.GetKeyDown(KeyCode.E) && puntaje.puntos >= 1000)
+        if (canInteractDoble && Input.GetKeyDown(KeyCode.E) && moneyCount >= 1000)
         {
             Debug.Log("Tecla E presionada con puntaje suficiente para DoubleTap.");
-            puntaje.SumarPuntos(-1000); // Resta puntos al puntaje
+            moneyCount-=1000; // Resta puntos al puntaje
 
             // Activar el doble daño en el script de Disparo
             disparo.ActivarDoubleTap(); // Asegúrate de tener la referencia al script Disparo
         }
         
-        if (canInteractBota && Input.GetKeyDown(KeyCode.E) && puntaje.puntos >= 1000)
+        if (canInteractBota && Input.GetKeyDown(KeyCode.E) && moneyCount >= 1000)
         {
             Debug.Log("Tecla E presionada con puntaje suficiente.");
-            puntaje.SumarPuntos(-1000); // Resta puntos al puntaje
+            moneyCount-=1000; // Resta puntos al puntaje
 
             StartCoroutine(SpeedBoost()); // Inicia la corrutina para cambiar los valores
 

@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] enemyPrefab;
-    // Coordenadas específicas para el rango de generación
+    // Coordenadas especï¿½ficas para el rango de generaciï¿½n
     private float minX = -0.00817865f, maxX = 8.174194f;
     private float minY = -4.399909f, maxY = -0.1328556f;
 
@@ -18,6 +18,8 @@ public class SpawnManager : MonoBehaviour
     public bool bandera;
     private AudioSource playerAudio;
 
+    [SerializeField] private GameObject boss;
+
     void Start()
     {
         bandera = false;
@@ -28,6 +30,7 @@ public class SpawnManager : MonoBehaviour
 
     void Update()
     {
+        
         enemyCount = FindObjectsOfType<Enemy>().Length;
 
         // Reproducir el sonido solo una vez cuando no haya enemigos
@@ -42,6 +45,14 @@ public class SpawnManager : MonoBehaviour
             {
                 bandera = true; // Evitar que se repita
                 Debug.Log("Se llego a la ronda limite.");
+                if (boss != null)
+                {
+                    boss.SetActive(true);
+                }
+                else
+                {
+                    Debug.LogError("No se encontrï¿½ el objeto Player en la escena.");
+                }
             }
 
             
@@ -59,19 +70,22 @@ public class SpawnManager : MonoBehaviour
     {
         for (int i = 0; i < enemiesToSpawn; i++)
         {
-            // Generar una posición inicial
+            // Generar una posiciï¿½n inicial
             Vector3 spawnPosition = GenerateSpawnPosition();
 
-            // Verificar si la posición está cerca del NavMesh
+            // Verificar si la posiciï¿½n estï¿½ cerca del NavMesh
             NavMeshHit hit;
             if (NavMesh.SamplePosition(spawnPosition, out hit, 1.0f, NavMesh.AllAreas))
             {
-                // Usar la posición ajustada (hit.position) para generar el enemigo
-                Instantiate(enemyPrefab[waveCount-10], hit.position, enemyPrefab[waveCount-10].transform.rotation);
+                // Usar la posiciï¿½n ajustada (hit.position) para generar el enemigo
+                if(waveCount < 16){
+                    Instantiate(enemyPrefab[waveCount-10], hit.position, enemyPrefab[waveCount-10].transform.rotation);
+                }
+                
             }
             else
             {
-                Debug.LogWarning("No se encontró una posición válida cerca del NavMesh. Saltando generación.");
+                Debug.LogWarning("No se encontrï¿½ una posiciï¿½n vï¿½lida cerca del NavMesh. Saltando generaciï¿½n.");
             }
         }
 

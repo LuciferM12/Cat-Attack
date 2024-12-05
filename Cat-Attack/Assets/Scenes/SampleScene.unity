@@ -3761,7 +3761,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &677839232
 Rigidbody2D:
   serializedVersion: 4
@@ -3862,8 +3862,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 0
-  danio: 0
-  vida: 0
+  danio: 50
+  vida: 3000
   coin: []
 --- !u!195 &677839236
 NavMeshAgent:
@@ -10283,6 +10283,7 @@ MonoBehaviour:
   enemyCount: 0
   round: {fileID: 8300000, guid: bbe980cd894501147b66194627712ce9, type: 3}
   bandera: 0
+  boss: {fileID: 677839231}
 --- !u!4 &1905261492
 Transform:
   m_ObjectHideFlags: 0

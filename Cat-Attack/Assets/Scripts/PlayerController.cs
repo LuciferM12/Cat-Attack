@@ -19,6 +19,11 @@ public class PlayerController : MonoBehaviour
     
     public AudioClip dodge;
     public AudioClip money;
+    public AudioClip RestoreLife;
+    public AudioClip DobleDaño;
+    public AudioClip SpeedPlus;
+    public AudioClip Invincible;
+
     public float moneyCount;
 int contador=25;
     private float minX = -0.00817865f, maxX = 8.174194f;
@@ -111,7 +116,24 @@ int contador=25;
             Debug.Log("Tecla E presionada con puntaje suficiente.");
             contador+=10;
             vida.ReestablecerVida(100+contador);
+            GetComponent<AudioSource>().PlayOneShot(RestoreLife,6.0f);
             moneyCount-=1000; // Resta puntos al puntaje
+        }
+
+        // Verifica si el jugador puede interactuar (si está dentro de la zona de colisión)
+        if (canInteractEstrella && Input.GetKeyDown(KeyCode.E) && moneyCount >= 3000)
+        {
+            Debug.Log("Tecla E presionada con puntaje suficiente.");
+            contador+=10;
+            vida.ReestablecerVida(100+contador);
+            GetComponent<AudioSource>().PlayOneShot(Invincible,20.0f);
+            moneyCount-=3000; // Resta puntos al puntaje
+
+            // Activa la invencibilidad
+            StartCoroutine(ActivarInvencibilidad());
+            StartCoroutine(SpeedBoost()); // Inicia la corrutina para cambiar los valores
+            disparo.ActivarDoubleTap(); // Asegúrate de tener la referencia al script Disparo
+
         }
 
         // Activar el DoubleTap si está en la zona y tiene puntos suficientes
@@ -119,7 +141,7 @@ int contador=25;
         {
             Debug.Log("Tecla E presionada con puntaje suficiente para DoubleTap.");
             moneyCount-=1000; // Resta puntos al puntaje
-
+            GetComponent<AudioSource>().PlayOneShot(DobleDaño,2.0f);
             // Activar el doble daño en el script de Disparo
             disparo.ActivarDoubleTap(); // Asegúrate de tener la referencia al script Disparo
         }
@@ -128,7 +150,7 @@ int contador=25;
         {
             Debug.Log("Tecla E presionada con puntaje suficiente.");
             moneyCount-=1000; // Resta puntos al puntaje
-
+            GetComponent<AudioSource>().PlayOneShot(SpeedPlus,2.0f);
             StartCoroutine(SpeedBoost()); // Inicia la corrutina para cambiar los valores
 
         }
@@ -153,6 +175,17 @@ int contador=25;
     public void ActivarDoubleTap()
     {
         disparo.ActivarDoubleTap(); // Llama al método ActivarDoubleTap del script Disparo
+    }
+
+    private IEnumerator ActivarInvencibilidad()
+    {
+        Debug.Log("Invencibilidad activada.");
+        vida.isInvincible = true; // Informa a CombateJugador que el jugador es invencible
+
+        yield return new WaitForSeconds(20); // Espera 20 segundos
+
+        vida.isInvincible = false; // Termina la invencibilidad
+        Debug.Log("Invencibilidad desactivada.");
     }
 
     IEnumerator PerformMinimalDodge()
@@ -192,6 +225,12 @@ int contador=25;
             canInteractVida = true; // Activa la bandera para permitir la interacción
         }
 
+        if (other.CompareTag("Estrella")) // Verifica si colide con el objeto "Vida"
+        {
+            Debug.Log("Colisión con Estrella detectada.");
+            canInteractEstrella = true; // Activa la bandera para permitir la interacción
+        }
+
         if (other.CompareTag("Velocidad")) // Verifica si colide con el objeto "Vida"
         {
             Debug.Log("Colisión con Velocidad detectada.");
@@ -216,6 +255,12 @@ int contador=25;
         {
             Debug.Log("Jugador salió de la zona de Vida.");
             canInteractVida = false; // Desactiva la bandera cuando el jugador sale de la zona
+        }
+
+        if (other.CompareTag("Estrella")) // Verifica si sale de la zona de "Vida"
+        {
+            Debug.Log("Jugador salió de la zona de Estrella.");
+            canInteractEstrella = false; // Desactiva la bandera cuando el jugador sale de la zona
         }
 
         if (other.CompareTag("Velocidad")) // Verifica si sale de la zona de "Vida"

@@ -40,6 +40,7 @@ public class MenuPausa : MonoBehaviour
 
     public void Quit(){
         Debug.Log("Cerrando juego");
+        UnityEditor.EditorApplication.isPlaying=false;
         Application.Quit();
     }
 }

@@ -9662,6 +9662,10 @@ MonoBehaviour:
   dodgeCooldown: 1
   dodge: {fileID: 8300000, guid: d131cc85b2a44b44fa08f355bea6c641, type: 3}
   money: {fileID: 8300000, guid: 315a90eb0a0eb1149abc5aab24de7238, type: 3}
+  RestoreLife: {fileID: 8300000, guid: bb9887231a1d1f8468f2c0a2cffc8b16, type: 3}
+  "DobleDa\xF1o": {fileID: 8300000, guid: 8dbcf55f7a0d4f9479927c35a10ba421, type: 3}
+  SpeedPlus: {fileID: 8300000, guid: 219bc4a4dfb6b6a42901468bef29d1ff, type: 3}
+  Invincible: {fileID: 8300000, guid: 60f756471340cbe4087a53e97537b4cd, type: 3}
   moneyCount: 0
   puntaje: {fileID: 1822421165}
   vida: {fileID: 1837152064}
@@ -9841,6 +9845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vida: 100
   hit: {fileID: 8300000, guid: 36425a45ecd826c41bbe8d84d8c2400b, type: 3}
+  isInvincible: 0
 --- !u!82 &1837152065
 AudioSource:
   m_ObjectHideFlags: 0

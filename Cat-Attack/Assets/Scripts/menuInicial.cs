@@ -10,6 +10,7 @@ public class menuInicial : MonoBehaviour
 
     public void Salir(){
         Debug.Log("Saliendooo");
+        UnityEditor.EditorApplication.isPlaying=false;
         Application.Quit();
     }
 

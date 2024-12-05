@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 1280372700}
   - component: {fileID: 1280372698}
   - component: {fileID: 1812550280308534169}
-  - component: {fileID: 2635314996581643486}
   - component: {fileID: 4629894026323903588}
   m_Layer: 0
   m_Name: Cobra
@@ -219,7 +218,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da8aca5f5f7c8648961887dc0da6c0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  personaje: {fileID: 0}
+  velocidad: 0
+  danio: 0
+  vida: 0
 --- !u!61 &1812550280308534169
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -265,21 +266,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.875}
   m_EdgeRadius: 0
---- !u!114 &2635314996581643486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7408623999408938367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c43cf308f989e2b41859f209b720798b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidad: 8
-  danio: 20
-  vida: 100
 --- !u!195 &4629894026323903588
 NavMeshAgent:
   m_ObjectHideFlags: 0

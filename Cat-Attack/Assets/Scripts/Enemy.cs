@@ -5,35 +5,83 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    private Transform personaje;
-    private NavMeshAgent agente;
+    [SerializeField] private float velocidad; 
+    [SerializeField] private int danio; 
+    [SerializeField] private float vida;
+
+    private Transform personaje; 
+    private NavMeshAgent agente; 
     private SpriteRenderer spriteRenderer;
+
     private void Awake()
     {
         agente = GetComponent<NavMeshAgent>();
-
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Start()
     {
-
-        spriteRenderer = GetComponent<SpriteRenderer>();
+       
         agente.updateRotation = false;
         agente.updateUpAxis = false;
-        GameObject playerObject = GameObject.Find("Player");
-        personaje = playerObject.transform;
 
+        
+        GameObject playerObject = GameObject.Find("Player");
+        if (playerObject != null)
+        {
+            personaje = playerObject.transform;
+        }
+        else
+        {
+            Debug.LogError("No se encontró un objeto llamado 'Player' en la escena.");
+        }
     }
 
-    // Update is called once per frame
     private void Update()
     {
-        agente.SetDestination(personaje.position);
-        Vector2 velocity = agente.velocity;
-        if (velocity.magnitude > 0.01f)
+        if (agente != null && personaje != null && agente.isActiveAndEnabled)
         {
-            spriteRenderer.flipX = velocity.x < 0;
+            agente.SetDestination(personaje.position);
+
+            Vector2 velocity = agente.velocity;
+            if (velocity.magnitude > 0.01f)
+            {
+                spriteRenderer.flipX = velocity.x < 0;
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            CombateJugador combateJugador = other.GetComponent<CombateJugador>();
+            if (combateJugador != null)
+            {
+                combateJugador.TomarDanio(danio);
+            }
+
+            Animator animator = other.GetComponent<Animator>();
+            if (animator != null)
+            {
+                animator.SetTrigger("Damage");
+            }
+
+            Destroy(gameObject);
+        }
+    }
+
+    public void TomarDanio(float daño)
+    {
+        vida -= daño;
+
+        if (vida <= 0)
+        {
+            if (agente != null)
+            {
+                agente.enabled = false; // Desactiva el agente antes de destruir el objeto
+            }
+            Destroy(gameObject);
         }
     }
 }

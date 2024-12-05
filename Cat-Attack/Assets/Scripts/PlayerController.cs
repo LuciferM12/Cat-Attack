@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro; 
 
 public class PlayerController : MonoBehaviour
 {
@@ -37,6 +38,8 @@ int contador=25;
     [SerializeField] public Puntaje puntaje; // Referencia al script Puntaje
     [SerializeField] public CombateJugador vida; // Referencia al script CombateJugador
     [SerializeField] public Disparo disparo; // Referencia al script Bala
+
+    [SerializeField] private TextMeshProUGUI interactText; // Cambiado a TextMeshProUGUI
 
 
     void Start()
@@ -110,14 +113,23 @@ int contador=25;
             StartCoroutine(PerformMinimalDodge());
         }
 
-        // Verifica si el jugador puede interactuar (si está dentro de la zona de colisión)
-        if (canInteractVida && Input.GetKeyDown(KeyCode.E) && moneyCount >= 1000)
+        // Mostrar texto y permitir interacción
+        if (canInteractVida)
         {
-            Debug.Log("Tecla E presionada con puntaje suficiente.");
-            contador+=10;
-            vida.ReestablecerVida(100+contador);
-            GetComponent<AudioSource>().PlayOneShot(RestoreLife,6.0f);
-            moneyCount-=1000; // Resta puntos al puntaje
+            interactText.text = "Presiona E para Restaurar Vida (Coste: 1000 puntos)";
+            
+            if (Input.GetKeyDown(KeyCode.E) && moneyCount >= 1000)
+            {
+                Debug.Log("Tecla E presionada con puntaje suficiente.");
+                contador+=10;
+                vida.ReestablecerVida(100+contador);
+                GetComponent<AudioSource>().PlayOneShot(RestoreLife,6.0f);
+                moneyCount-=1000; // Resta puntos al puntaje
+            }
+        }
+        else
+        {
+            interactText.text = ""; // Ocultar texto cuando no se puede interactuar
         }
 
         // Verifica si el jugador puede interactuar (si está dentro de la zona de colisión)
@@ -154,6 +166,10 @@ int contador=25;
             StartCoroutine(SpeedBoost()); // Inicia la corrutina para cambiar los valores
 
         }
+
+        
+
+
 
     }
 
@@ -276,5 +292,8 @@ int contador=25;
         }
 
     }
+
+
+
 
 }

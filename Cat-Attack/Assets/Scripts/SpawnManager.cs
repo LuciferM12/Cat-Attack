@@ -5,8 +5,7 @@ using UnityEngine.AI;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject enemyPrefab;
-
+    public GameObject[] enemyPrefab;
     // Coordenadas específicas para el rango de generación
     private float minX = -0.00817865f, maxX = 8.174194f;
     private float minY = -4.399909f, maxY = -0.1328556f;
@@ -42,7 +41,7 @@ public class SpawnManager : MonoBehaviour
     {
         float xPos = Random.Range(minX, maxX);
         float yPos = Random.Range(minY, maxY);
-        return new Vector3(xPos, yPos, 0); // Generar posición inicial
+        return new Vector3(xPos, yPos, 0);
     }
 
     void SpawnEnemyWave(int enemiesToSpawn)
@@ -57,7 +56,7 @@ public class SpawnManager : MonoBehaviour
             if (NavMesh.SamplePosition(spawnPosition, out hit, 1.0f, NavMesh.AllAreas))
             {
                 // Usar la posición ajustada (hit.position) para generar el enemigo
-                Instantiate(enemyPrefab, hit.position, enemyPrefab.transform.rotation);
+                Instantiate(enemyPrefab[waveCount-10], hit.position, enemyPrefab[waveCount-10].transform.rotation);
             }
             else
             {

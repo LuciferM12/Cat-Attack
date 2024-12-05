@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
             lastMoveDirection = movement.normalized;
         }
 
-        // Voltear el sprite según la dirección
+        /* Voltear el sprite según la dirección
         if (horizontalInput < 0.0f)
         {
             transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
         else if (horizontalInput > 0.0f)
         {
             transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-        }
+        }*/
 
         // Mover el personaje si no está haciendo dodge
         if (!isDodging)

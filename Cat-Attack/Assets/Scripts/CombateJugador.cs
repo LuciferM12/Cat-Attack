@@ -8,20 +8,18 @@ public class CombateJugador : MonoBehaviour
     [SerializeField] private int vida;
     public event EventHandler MuerteJugador;
     public AudioClip hit;
-    private AudioSource audio;
     private Animator animator;
     
     void Start()
     {
 
-        audio = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
 
     }
 
     public void TomarDanio(int cantidadDanio){
 
-        audio.PlayOneShot(hit, 2.0f);
+        GetComponent<AudioSource>().PlayOneShot(hit, 2.0f);
 
         vida-=cantidadDanio;
         if(vida<=0){

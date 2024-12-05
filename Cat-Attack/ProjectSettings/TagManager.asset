@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Coins
+  - Enemy
+  - Velocidad
+  - Vida
+  - DoubleTap
+  - Estrella
   layers:
   - Default
   - TransparentFX

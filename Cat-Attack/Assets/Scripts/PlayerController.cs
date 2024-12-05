@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
     
     public AudioClip dodge;
     public AudioClip money;
-    private AudioSource audio;
 
     private float minX = -0.00817865f, maxX = 8.174194f;
     private float minY = -4.399909f, maxY = -0.1328556f;
@@ -29,7 +28,6 @@ public class PlayerController : MonoBehaviour
 
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        audio = GetComponent<AudioSource>();
 
         rb.gravityScale = 0f;
         rb.drag = 15f;
@@ -58,7 +56,7 @@ public class PlayerController : MonoBehaviour
             lastMoveDirection = movement.normalized;
         }
 
-        /*// Voltear el sprite según la dirección
+        // Voltear el sprite según la dirección
         if (horizontalInput < 0.0f)
         {
             transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
@@ -66,7 +64,7 @@ public class PlayerController : MonoBehaviour
         else if (horizontalInput > 0.0f)
         {
             transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-        }*/
+        }
 
         // Mover el personaje si no está haciendo dodge
         if (!isDodging)
@@ -103,7 +101,7 @@ public class PlayerController : MonoBehaviour
     {
         isDodging = true;
 
-        audio.PlayOneShot(dodge, 2.0f);
+        GetComponent<AudioSource>().PlayOneShot(dodge, 2.0f);
 
         animator.SetBool("isDodge", true);
         
@@ -132,8 +130,17 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Coins")) // Verifica si el jugador colisiona
         {
-            audio.PlayOneShot(money, 2.0f);
+            GetComponent<AudioSource>().PlayOneShot(money, 2.0f);
         }
+
+        //if (other.CompareTag("Vida") && Input.GetKeyDown(KeyCode.E)){
+
+
+        
+
+        //}
+
+
     }
 
 }

@@ -6,11 +6,9 @@ public class SpawnManager : MonoBehaviour
 {
 
     public GameObject enemyPrefab;
-    public GameObject powerupPrefab;
-
     private float spawnRangeX = 10;
-    private float spawnZMin = 15; // set min spawn Z
-    private float spawnZMax = 25; // set max spawn Z
+    private float spawnYMin = 15; // set min spawn Z
+    private float spawnYMax = 25; // set max spawn Z
 
     public int enemyCount;
     public int waveCount = 1;
@@ -24,17 +22,17 @@ public class SpawnManager : MonoBehaviour
 
         if (enemyCount == 0)
         {
-            GetComponent<AudioSource>().PlayOneShot(round, 2.0f);
+            GetComponent<AudioSource>().PlayOneShot(round, 10.0f);
             SpawnEnemyWave(waveCount);
         }
 
     }
 
-    Vector3 GenerateSpawnPosition ()
+    Vector2 GenerateSpawnPosition ()
     {
         float xPos = Random.Range(-spawnRangeX, spawnRangeX);
-        float zPos = Random.Range(spawnZMin, spawnZMax);
-        return new Vector3(xPos, 0, zPos);
+        float yPos = Random.Range(spawnYMin, spawnYMax);
+        return new Vector2(xPos, yPos);
     }
 
     void SpawnEnemyWave(int enemiesToSpawn)

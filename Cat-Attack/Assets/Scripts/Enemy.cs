@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     private Transform personaje; 
     private NavMeshAgent agente; 
     private SpriteRenderer spriteRenderer;
+    public GameObject coin;
 
     private void Awake()
     {
@@ -81,6 +82,8 @@ public class Enemy : MonoBehaviour
             {
                 agente.enabled = false; // Desactiva el agente antes de destruir el objeto
             }
+            Vector2 location = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+            Instantiate(coin, location, coin.transform.rotation);
             Destroy(gameObject);
         }
     }

@@ -219,3 +219,4 @@ MonoBehaviour:
   velocidad: 0
   danio: 0
   vida: 0
+  coin: {fileID: 7815156559418787193, guid: 643f6e3ade2d2f141a9b45f797bf6a01, type: 3}

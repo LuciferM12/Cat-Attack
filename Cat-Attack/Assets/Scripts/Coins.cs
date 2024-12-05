@@ -7,6 +7,7 @@ public class Coins : MonoBehaviour //CHANGE SCRIPT
     [SerializeField] public float cantidadPuntos = 10; // Puntos que otorga
     [SerializeField] public Puntaje puntaje; // Referencia al script Puntaje
 
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")) // Verifica si el jugador colisiona

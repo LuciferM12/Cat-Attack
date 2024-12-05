@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     private NavMeshAgent agente;
     private SpriteRenderer spriteRenderer;
     public GameObject[] coin;
+    private Animator animator; // Referencia al Animator del enemigo
 
     private bool isPlayerInRange = false; // Bandera para verificar si el jugador está en rango
     private Coroutine damageCoroutine; // Para gestionar la corutina de daño
@@ -21,6 +22,7 @@ public class Enemy : MonoBehaviour
     {
         agente = GetComponent<NavMeshAgent>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>(); // Obtener el Animator del enemigo
     }
 
     private void Start()
@@ -68,10 +70,16 @@ public class Enemy : MonoBehaviour
                 combateJugador.TomarDanio(danio);
             }
 
-            Animator animator = other.GetComponent<Animator>();
+            // Activar animación de ataque en el enemigo
             if (animator != null)
             {
-                animator.SetTrigger("Damage");
+                animator.SetTrigger("Attack");
+            }
+
+            Animator animatorPlayer = other.GetComponent<Animator>();
+            if (animatorPlayer != null)
+            {
+                animatorPlayer.SetTrigger("Damage");
             }
         }
     }

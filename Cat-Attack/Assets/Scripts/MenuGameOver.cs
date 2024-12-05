@@ -43,7 +43,7 @@ public class MenuGameOver : MonoBehaviour
 
     public void Salir(){
         Debug.Log("Cerrando juego");
-        UnityEditor.EditorApplication.isPlaying=false;
+        //UnityEditor.EditorApplication.isPlaying=false;
         Application.Quit();
     }
 

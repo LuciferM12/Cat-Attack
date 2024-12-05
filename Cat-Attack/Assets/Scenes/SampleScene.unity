@@ -11717,6 +11717,7 @@ MonoBehaviour:
   - {fileID: 7408623999408938367, guid: 4e37986c1a19b1140a3b791179fe0a45, type: 3}
   - {fileID: 4205521309688599217, guid: bdaee0e821f08344bb17fd68be5e301e, type: 3}
   - {fileID: 7648793261136674487, guid: 92b1d56ecd2258f4aa99e4952b9a4088, type: 3}
+  - {fileID: 340469751358839673, guid: 144a23d658c9cf241a0827483382031a, type: 3}
   - {fileID: 8422804018158489819, guid: 894c1b0cfd916944a959f980882bd9b9, type: 3}
   - {fileID: 3352967492445639612, guid: e9970cf56809da441955045a60430c24, type: 3}
   - {fileID: 2283039263327001787, guid: b9ef5d2491f11cd41a88845eeff98a54, type: 3}
@@ -18304,6 +18305,10 @@ PrefabInstance:
     - target: {fileID: 5102003175031524572, guid: 4c618177a451b9f4098a4ece82638745, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316881068881836632, guid: 4c618177a451b9f4098a4ece82638745, type: 3}
+      propertyPath: "da\xF1o"
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6316881068881836632, guid: 4c618177a451b9f4098a4ece82638745, type: 3}
       propertyPath: velocidad

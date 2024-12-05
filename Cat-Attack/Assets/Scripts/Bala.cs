@@ -33,7 +33,7 @@ public class Bala : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Enemy")){
-            other.GetComponent<ItemEnemigo>().Tomardaño(daño);
+            other.GetComponent<Enemy>().TomarDanio(daño);
             Destroy(gameObject);
         }
     }

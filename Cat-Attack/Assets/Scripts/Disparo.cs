@@ -25,6 +25,7 @@ public class Disparo : MonoBehaviour
         // Evitar que el disparo se ejecute si el clic ocurre sobre un elemento UI
         if (UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
         return;
+
         // Flip del personaje dependiendo del mouse
         objetivo = camara.ScreenToWorldPoint(Input.mousePosition);
         float anguloRadiantes = Mathf.Atan2(objetivo.y - transform.position.y, objetivo.x - transform.position.x);

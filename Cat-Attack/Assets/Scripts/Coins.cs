@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Coins : MonoBehaviour //CHANGE SCRIPT
 {
-    [SerializeField] private float cantidadPuntos = 10; // Puntos que otorga
-    [SerializeField] private Puntaje puntaje; // Referencia al script Puntaje
+    [SerializeField] public float cantidadPuntos = 10; // Puntos que otorga
+    [SerializeField] public Puntaje puntaje; // Referencia al script Puntaje
 
     private void OnTriggerEnter2D(Collider2D other)
     {

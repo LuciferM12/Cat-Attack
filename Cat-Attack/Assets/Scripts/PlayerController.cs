@@ -23,6 +23,9 @@ public class PlayerController : MonoBehaviour
     private float minX = -0.00817865f, maxX = 8.174194f;
     private float minY = -4.399909f, maxY = -0.1328556f;
 
+    [SerializeField] public Puntaje puntaje; // Referencia al script Puntaje
+    [SerializeField] public CombateJugador vida; // Referencia al script CombateJugador
+
     void Start()
     {
 
@@ -128,17 +131,24 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+
         if (other.CompareTag("Coins")) // Verifica si el jugador colisiona
         {
             GetComponent<AudioSource>().PlayOneShot(money, 2.0f);
         }
 
-        //if (other.CompareTag("Vida") && Input.GetKeyDown(KeyCode.E)){
-
-
-        
-
-        //}
+        if (other.CompareTag("Vida"))
+        {
+            Debug.Log("Colisión con Vida detectada.");
+            Debug.Log("Puntaje actual: " + puntaje.puntos);
+            
+            if (Input.GetKeyDown(KeyCode.E) && puntaje.puntos >= 1000)
+            {
+                Debug.Log("Tecla E presionada con puntaje suficiente.");
+                vida.ReestablecerVida(100);
+                puntaje.SumarPuntos(-1000);
+            }
+        }
 
 
     }

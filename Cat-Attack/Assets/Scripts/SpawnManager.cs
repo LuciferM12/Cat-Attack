@@ -14,7 +14,7 @@ public class SpawnManager : MonoBehaviour
     public int waveCount = 1;
 
     public AudioClip round;
-
+    
     // Start is called before the first frame update
     void Update()
     {
@@ -22,7 +22,7 @@ public class SpawnManager : MonoBehaviour
 
         if (enemyCount == 0)
         {
-            GetComponent<AudioSource>().PlayOneShot(round, 10.0f);
+            GetComponent<AudioSource>().PlayOneShot(round, 8.0f);
             SpawnEnemyWave(waveCount);
         }
 

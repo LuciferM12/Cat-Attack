@@ -5,7 +5,7 @@ using System;
 
 public class CombateJugador : MonoBehaviour
 {
-    [SerializeField] private int vida;
+    [SerializeField] public int vida;
     public event EventHandler MuerteJugador;
     public AudioClip hit;
     private Animator animator;
@@ -28,6 +28,13 @@ public class CombateJugador : MonoBehaviour
             MuerteJugador?.Invoke(this,EventArgs.Empty);
             Destroy(gameObject);
         }
+    }
+
+    public void ReestablecerVida(int cantVida){
+
+        Debug.Log("Restableciendo vida a: " + cantVida);
+        vida = cantVida;
+
     }
 
     IEnumerator Death(){

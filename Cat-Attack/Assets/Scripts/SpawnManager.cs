@@ -11,7 +11,7 @@ public class SpawnManager : MonoBehaviour
     private float minY = -4.399909f, maxY = -0.1328556f;
 
     public int enemyCount;
-    private int waveCount = 10;
+    private int waveCount;
 
     public AudioClip round;
 
@@ -20,8 +20,10 @@ public class SpawnManager : MonoBehaviour
 
     void Start()
     {
+        bandera = false;
+        waveCount = 10;
         playerAudio = GetComponent<AudioSource>();
-        SpawnEnemyWave(waveCount);
+        SpawnEnemyWave(waveCount*2);
     }
 
     void Update()
@@ -31,9 +33,18 @@ public class SpawnManager : MonoBehaviour
         // Reproducir el sonido solo una vez cuando no haya enemigos
         if (enemyCount == 0)
         {
-            bandera = true; // Evitar que se repita
-            playerAudio.PlayOneShot(round, 8.0f);
-            SpawnEnemyWave(waveCount);
+            if (waveCount < 16 && !bandera)
+            {
+                playerAudio.PlayOneShot(round, 8.0f);
+                SpawnEnemyWave(waveCount);
+            }
+            else
+            {
+                bandera = true; // Evitar que se repita
+                Debug.Log("Se llego a la ronda limite.");
+            }
+
+            
         }
     }
 
@@ -66,4 +77,5 @@ public class SpawnManager : MonoBehaviour
 
         waveCount++;
     }
+
 }

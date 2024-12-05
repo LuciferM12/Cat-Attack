@@ -32,10 +32,12 @@ public class MenuGameOver : MonoBehaviour
     }
 
     public void Reiniciar(){
+        combateJugador.MuerteJugador -= ActivarMenu;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void MenuInicial(string nombre){
+        combateJugador.MuerteJugador -= ActivarMenu;
         SceneManager.LoadScene(nombre);
     }
 

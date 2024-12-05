@@ -5,14 +5,17 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private float velocidad; 
-    [SerializeField] private int danio; 
+    [SerializeField] private float velocidad;
+    [SerializeField] private int danio;
     [SerializeField] private float vida;
 
-    private Transform personaje; 
-    private NavMeshAgent agente; 
+    private Transform personaje;
+    private NavMeshAgent agente;
     private SpriteRenderer spriteRenderer;
     public GameObject[] coin;
+
+    private bool isPlayerInRange = false; // Bandera para verificar si el jugador está en rango
+    private Coroutine damageCoroutine; // Para gestionar la corutina de daño
 
     private void Awake()
     {
@@ -22,11 +25,9 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-       
         agente.updateRotation = false;
         agente.updateUpAxis = false;
 
-        
         GameObject playerObject = GameObject.Find("Player");
         if (playerObject != null)
         {
@@ -56,6 +57,11 @@ public class Enemy : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            // Comienza a hacer daño al jugador
+            isPlayerInRange = true;
+            damageCoroutine = StartCoroutine(DoDamageOverTime(other.GetComponent<CombateJugador>(), other.GetComponent<Animator>()));
+
+            // Daño inicial inmediato al entrar en contacto
             CombateJugador combateJugador = other.GetComponent<CombateJugador>();
             if (combateJugador != null)
             {
@@ -67,8 +73,34 @@ public class Enemy : MonoBehaviour
             {
                 animator.SetTrigger("Damage");
             }
+        }
+    }
 
-            //Destroy(gameObject);
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            // Detiene el daño al salir del rango del enemigo
+            isPlayerInRange = false;
+            if (damageCoroutine != null)
+            {
+                StopCoroutine(damageCoroutine);
+            }
+        }
+    }
+
+    private IEnumerator DoDamageOverTime(CombateJugador combateJugador, Animator animator)
+    {
+        while (isPlayerInRange && combateJugador != null)
+        {
+            yield return new WaitForSeconds(2f); // Espera 2 segundos entre daños
+
+            combateJugador.TomarDanio(danio);
+
+            if (animator != null)
+            {
+                animator.SetTrigger("Damage");
+            }
         }
     }
 
@@ -84,10 +116,10 @@ public class Enemy : MonoBehaviour
             }
             int randomNumber = Random.Range(1, 11);
             Vector2 location = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
-            if(randomNumber == 7)
-            Instantiate(coin[1], location, coin[1].transform.rotation);
+            if (randomNumber == 7)
+                Instantiate(coin[1], location, coin[1].transform.rotation);
             else
-            Instantiate(coin[0], location, coin[0].transform.rotation);
+                Instantiate(coin[0], location, coin[0].transform.rotation);
 
             Destroy(gameObject);
         }

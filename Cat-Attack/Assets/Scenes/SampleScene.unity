@@ -9658,7 +9658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8072480b4a4cb1e42aab80c0290360cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 50
+  vida: 100
   hit: {fileID: 8300000, guid: 36425a45ecd826c41bbe8d84d8c2400b, type: 3}
 --- !u!82 &1837152065
 AudioSource:

@@ -36,7 +36,7 @@ public class SpawnManager : MonoBehaviour
         // Reproducir el sonido solo una vez cuando no haya enemigos
         if (enemyCount == 0)
         {
-            if (waveCount < 16 && !bandera)
+            if (waveCount < 17 && !bandera)
             {
                 playerAudio.PlayOneShot(round, 8.0f);
                 SpawnEnemyWave(waveCount);
@@ -78,7 +78,7 @@ public class SpawnManager : MonoBehaviour
             if (NavMesh.SamplePosition(spawnPosition, out hit, 1.0f, NavMesh.AllAreas))
             {
                 // Usar la posici�n ajustada (hit.position) para generar el enemigo
-                if(waveCount < 16){
+                if(waveCount < 17){
                     Instantiate(enemyPrefab[waveCount-10], hit.position, enemyPrefab[waveCount-10].transform.rotation);
                 }
                 

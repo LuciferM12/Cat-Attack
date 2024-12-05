@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     private float minX = -0.00817865f, maxX = 8.174194f;
     private float minY = -4.399909f, maxY = -0.1328556f;
 
+    private bool canInteract = false;
     [SerializeField] public Puntaje puntaje; // Referencia al script Puntaje
     [SerializeField] public CombateJugador vida; // Referencia al script CombateJugador
 
@@ -97,6 +98,13 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(PerformMinimalDodge());
         }
 
+        // Verifica si el jugador puede interactuar (si está dentro de la zona de colisión)
+        if (canInteract && Input.GetKeyDown(KeyCode.E) && puntaje.puntos >= 1000)
+        {
+            Debug.Log("Tecla E presionada con puntaje suficiente.");
+            vida.ReestablecerVida(100);
+            puntaje.SumarPuntos(-1000); // Resta puntos al puntaje
+        }
         
     }
 
@@ -131,26 +139,25 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.CompareTag("Vida")) // Verifica si colide con el objeto "Vida"
+        {
+            Debug.Log("Colisión con Vida detectada.");
+            canInteract = true; // Activa la bandera para permitir la interacción
+        }
 
-        if (other.CompareTag("Coins")) // Verifica si el jugador colisiona
+        if (other.CompareTag("Coins")) // Verifica si colide con las monedas
         {
             GetComponent<AudioSource>().PlayOneShot(money, 2.0f);
         }
-
-        if (other.CompareTag("Vida"))
-        {
-            Debug.Log("Colisión con Vida detectada.");
-            Debug.Log("Puntaje actual: " + puntaje.puntos);
-            
-            if (Input.GetKeyDown(KeyCode.E) && puntaje.puntos >= 1000)
-            {
-                Debug.Log("Tecla E presionada con puntaje suficiente.");
-                vida.ReestablecerVida(100);
-                puntaje.SumarPuntos(-1000);
-            }
-        }
-
-
     }
 
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Vida")) // Verifica si sale de la zona de "Vida"
+        {
+            Debug.Log("Jugador salió de la zona de Vida.");
+            canInteract = false; // Desactiva la bandera cuando el jugador sale de la zona
+        }
+    }
+    
 }

@@ -14,15 +14,25 @@ public class SpawnManager : MonoBehaviour
     public int waveCount = 1;
 
     public AudioClip round;
-    
+
+    public bool bandera;
+    private AudioSource playerAudio;
+
+    void Start()
+    {
+        playerAudio=GetComponent<AudioSource>();
+    }
+
     // Start is called before the first frame update
     void Update()
     {
         enemyCount = FindObjectsOfType<Enemy>().Length;
 
-        if (enemyCount == 0)
+        // Reproducir el sonido solo una vez cuando no haya enemigos
+        if (enemyCount == 0 && !bandera)
         {
-            GetComponent<AudioSource>().PlayOneShot(round, 8.0f);
+            bandera = true; // Evitar que se repita
+            playerAudio.PlayOneShot(round, 8.0f);
             SpawnEnemyWave(waveCount);
         }
 

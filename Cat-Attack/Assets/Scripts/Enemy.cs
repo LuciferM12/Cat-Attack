@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Transform personaje;
+    private Transform personaje;
     private NavMeshAgent agente;
     private SpriteRenderer spriteRenderer;
     private void Awake()
@@ -17,9 +17,13 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
+
         spriteRenderer = GetComponent<SpriteRenderer>();
         agente.updateRotation = false;
         agente.updateUpAxis = false;
+        GameObject playerObject = GameObject.Find("Player");
+        personaje = playerObject.transform;
+
     }
 
     // Update is called once per frame

@@ -2513,7 +2513,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -6109,7 +6109,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.00000071525574, y: -0.081451}
@@ -9539,14 +9539,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5652305f25a56e4da824d2cbf2adac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.8
-  dodgeForce: 10
   dodgeDuration: 0.2
   dodgeCooldown: 1
   dodge: {fileID: 8300000, guid: d131cc85b2a44b44fa08f355bea6c641, type: 3}
   money: {fileID: 8300000, guid: 315a90eb0a0eb1149abc5aab24de7238, type: 3}
   puntaje: {fileID: 1822421165}
   vida: {fileID: 1837152064}
+  disparo: {fileID: 1837152066}
 --- !u!212 &1837152059
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10036,7 +10035,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.00000047683716, y: -0.13575935}
@@ -10186,7 +10185,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bbe980cd894501147b66194627712ce9, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.108
+  m_Volume: 0.053
   m_Pitch: 1
   Loop: 0
   Mute: 0

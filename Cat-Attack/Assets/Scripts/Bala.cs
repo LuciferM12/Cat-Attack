@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Bala : MonoBehaviour
 {
-    [SerializeField] private float velocidad;
-    [SerializeField] private float daño;
+    public float velocidad;
+    public float daño;
 
     private float minX = -0.11f, maxX= 8.4f;
     private float minY = -4.6f, maxY = 0.01f;
@@ -38,5 +38,9 @@ public class Bala : MonoBehaviour
         }
     }
 
+    public void ActualizarDaño(float nuevoDaño){
+        daño = nuevoDaño;
+        Debug.Log("Daño actualizado a: " + daño); // Verifica si el daño cambia
+    }
     
 }

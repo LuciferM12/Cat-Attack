@@ -8,14 +8,15 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float velocidad;
     [SerializeField] private int danio;
     [SerializeField] private float vida;
+    public GameObject pantallaVictoria; // Asigna la pantalla de victoria en el inspector
 
     private Transform personaje;
     private NavMeshAgent agente;
     private SpriteRenderer spriteRenderer;
     public GameObject[] coin;
 
-    private bool isPlayerInRange = false; // Bandera para verificar si el jugador está en rango
-    private Coroutine damageCoroutine; // Para gestionar la corutina de daño
+    private bool isPlayerInRange = false; // Bandera para verificar si el jugador estï¿½ en rango
+    private Coroutine damageCoroutine; // Para gestionar la corutina de daï¿½o
 
     private void Awake()
     {
@@ -35,7 +36,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            Debug.LogError("No se encontró un objeto llamado 'Player' en la escena.");
+            Debug.LogError("No se encontrï¿½ un objeto llamado 'Player' en la escena.");
         }
     }
 
@@ -57,11 +58,11 @@ public class Enemy : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Comienza a hacer daño al jugador
+            // Comienza a hacer daï¿½o al jugador
             isPlayerInRange = true;
             damageCoroutine = StartCoroutine(DoDamageOverTime(other.GetComponent<CombateJugador>(), other.GetComponent<Animator>()));
 
-            // Daño inicial inmediato al entrar en contacto
+            // Daï¿½o inicial inmediato al entrar en contacto
             CombateJugador combateJugador = other.GetComponent<CombateJugador>();
             if (combateJugador != null)
             {
@@ -80,7 +81,7 @@ public class Enemy : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Detiene el daño al salir del rango del enemigo
+            // Detiene el daï¿½o al salir del rango del enemigo
             isPlayerInRange = false;
             if (damageCoroutine != null)
             {
@@ -93,7 +94,7 @@ public class Enemy : MonoBehaviour
     {
         while (isPlayerInRange && combateJugador != null)
         {
-            yield return new WaitForSeconds(2f); // Espera 2 segundos entre daños
+            yield return new WaitForSeconds(2f); // Espera 2 segundos entre daï¿½os
 
             combateJugador.TomarDanio(danio);
 
@@ -104,9 +105,9 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void TomarDanio(float daño)
+    public void TomarDanio(float danio)
     {
-        vida -= daño;
+        vida -= danio;
 
         if (vida <= 0)
         {
@@ -114,13 +115,25 @@ public class Enemy : MonoBehaviour
             {
                 agente.enabled = false; // Desactiva el agente antes de destruir el objeto
             }
-            int randomNumber = Random.Range(1, 11);
-            Vector2 location = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
-            if (randomNumber == 7)
-                Instantiate(coin[1], location, coin[1].transform.rotation);
+            // Detecta si es el jefe final por su etiqueta o nombre
+            if (gameObject.name == "Boss")
+            {
+                Debug.Log("Â¡Jefe final derrotado! Mostrando pantalla de victoria.");
+                if (pantallaVictoria != null)
+                {
+                    pantallaVictoria.SetActive(true); // Activa la pantalla de victoria
+                }
+            }
             else
-                Instantiate(coin[0], location, coin[0].transform.rotation);
-
+            {
+                // LÃ³gica para enemigos normales
+                int randomNumber = Random.Range(1, 11);
+                Vector2 location = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+                if (randomNumber == 7)
+                    Instantiate(coin[1], location, coin[1].transform.rotation);
+                else
+                    Instantiate(coin[0], location, coin[0].transform.rotation);
+            }
             Destroy(gameObject);
         }
     }

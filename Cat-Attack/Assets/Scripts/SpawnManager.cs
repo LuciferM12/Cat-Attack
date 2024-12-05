@@ -23,7 +23,7 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         bandera = false;
-        waveCount = 15;
+        waveCount = 10;
         playerAudio = GetComponent<AudioSource>();
         SpawnEnemyWave(waveCount*2);
     }

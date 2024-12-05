@@ -217,5 +217,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 0
-  danio: 0
-  vida: 0
+  danio: 70
+  vida: 250

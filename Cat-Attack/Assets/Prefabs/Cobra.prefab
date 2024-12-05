@@ -219,8 +219,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 0
-  danio: 0
-  vida: 0
+  danio: 10
+  vida: 60
 --- !u!61 &1812550280308534169
 BoxCollider2D:
   m_ObjectHideFlags: 0

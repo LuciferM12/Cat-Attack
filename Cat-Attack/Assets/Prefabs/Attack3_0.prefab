@@ -123,8 +123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 0
-  danio: 0
-  vida: 0
+  danio: 20
+  vida: 100
 --- !u!195 &-2121364350616411141
 NavMeshAgent:
   m_ObjectHideFlags: 0

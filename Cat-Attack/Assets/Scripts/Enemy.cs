@@ -67,7 +67,7 @@ public class Enemy : MonoBehaviour
                 animator.SetTrigger("Damage");
             }
 
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 

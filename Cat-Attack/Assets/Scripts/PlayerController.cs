@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     
     public AudioClip dodge;
     public AudioClip money;
+    public float moneyCount;
 
     private float minX = -0.00817865f, maxX = 8.174194f;
     private float minY = -4.399909f, maxY = -0.1328556f;

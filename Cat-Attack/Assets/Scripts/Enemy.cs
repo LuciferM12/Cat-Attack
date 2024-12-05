@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     private Transform personaje; 
     private NavMeshAgent agente; 
     private SpriteRenderer spriteRenderer;
+    public GameObject[] coin;
 
     private void Awake()
     {
@@ -67,7 +68,7 @@ public class Enemy : MonoBehaviour
                 animator.SetTrigger("Damage");
             }
 
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 
@@ -81,6 +82,13 @@ public class Enemy : MonoBehaviour
             {
                 agente.enabled = false; // Desactiva el agente antes de destruir el objeto
             }
+            int randomNumber = Random.Range(1, 11);
+            Vector2 location = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+            if(randomNumber == 7)
+            Instantiate(coin[1], location, coin[1].transform.rotation);
+            else
+            Instantiate(coin[0], location, coin[0].transform.rotation);
+
             Destroy(gameObject);
         }
     }

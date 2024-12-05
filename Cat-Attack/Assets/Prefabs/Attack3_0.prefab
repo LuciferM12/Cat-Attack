@@ -123,8 +123,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 0
-  danio: 0
-  vida: 0
+  danio: 20
+  vida: 100
+  coin:
+  - {fileID: 7815156559418787193, guid: 643f6e3ade2d2f141a9b45f797bf6a01, type: 3}
+  - {fileID: 4276443161537204355, guid: b47f55870527270418b870e5f39c13ca, type: 3}
 --- !u!195 &-2121364350616411141
 NavMeshAgent:
   m_ObjectHideFlags: 0
